@@ -16,4 +16,11 @@
       width: 180px;
     }
   }
+  @media (max-width: 768px) {
+    .fixed {
+      position: relative;
+      width: 100%;
+      height: 50vh;
+    }
+  }
 }
