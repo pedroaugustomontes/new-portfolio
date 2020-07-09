@@ -7,6 +7,21 @@
   <title>Portfolio</title>
   <!-- LINK MAIN.CSS FILE -->
   <link rel="stylesheet" href="./css/main.css">
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+  <script type="text/javascript">
+    function sendEmail() {
+      Email.send({
+        SecureToken: "168f6d74-f056-44db-a5b6-7d3a489dfc02",
+        To: 'nerdindiano@gmail.com',
+        From: "pedro.montesales@gmail.com",
+        Subject: "teste",
+        Body: "testexD"
+      }).then(
+        message => alert(message)
+      );
+    }
+  </script>
 </head>
 
 <body>
@@ -92,7 +107,7 @@
                           <textarea class="form-control" name="" id="" rows="6" placeholder="Mensagem"></textarea>
                         </div>
                         <div class="col-12 py-3">
-                          <button class="btn border fs-1 text-secondary px-4">Enviar Mensagem</button>
+                          <button type="button" onclick="sendEmail()" class="btn border fs-1 text-secondary px-4">Enviar Mensagem</button>
                         </div>
                       </div>
                     </form>
